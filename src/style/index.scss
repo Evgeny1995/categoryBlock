@@ -1,0 +1,323 @@
+@import './fonts';
+@import './variables';
+
+body {
+  margin: 0;
+}
+
+.categories_block_wrap {
+  width: 100%;
+  background-color: $color-white;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.categories_content {
+  max-width: 1600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.categories_title {
+  font-size: 40px;
+  font-family: Impact , serif;
+  margin: 0 auto;
+  width: 376px;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 88px;
+    background-color: $color-yellow;
+    bottom: -13px;
+    left: 0;
+    border-radius: 100px;
+  }
+}
+
+@media(min-width: 804px) {
+  .categories_title {
+    width: 784px;
+  }
+}
+
+@media(min-width: 1212px) {
+  .categories_title {
+    width: 1192px;
+  }
+}
+
+.categories_list {
+  padding: 0 10px;
+  margin: 68px auto 0 auto;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  z-index: 1;
+}
+
+.categories_item {
+  border: 2px solid $color-green;
+  border-radius: 15px;
+  padding: 16px;
+  width: 340px;
+  height: 152px;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.categories_item:hover {
+  background: linear-gradient(to top, #c9e999, #def2c1);
+}
+
+.pesticides:before {
+  position: absolute;
+  content: '';
+  width: 180px;
+  height: 90px;
+  top: 22px;
+  right: 22px;
+  background: url("../img/svg/пестициды.svg");
+}
+
+.pesticides:hover.pesticides:before {
+  background: url("../img/svg/пестициды_hover.svg");
+  top: 8px;
+  height: 104px;
+}
+
+.cultures:before {
+  position: absolute;
+  content: '';
+  width: 90px;
+  height: 90px;
+  top: 45px;
+  right: 59px;
+  background: url("../img/svg/культуры.svg");
+}
+
+.cultures:hover.cultures:before {
+  background: url("../img/svg/культуры_hover.svg");
+  top: 24px;
+  right: 60px;
+  height: 110px;
+}
+
+.pests:before {
+  position: absolute;
+  content: '';
+  width: 208px;
+  height: 90px;
+  top: 22px;
+  right: 22px;
+  background: url("../img/svg/вредители.svg");
+}
+
+.pests:hover.pests:before {
+  background: url("../img/svg/вредители_hover.svg");
+  width: 245px;
+  height: 115px;
+  top: 9px;
+  right: 0;
+}
+
+.active_substances:before {
+  position: absolute;
+  content: '';
+  width: 172px;
+  height: 114px;
+  top: 22px;
+  right: 22px;
+  background: url("../img/svg/вещества.svg");
+}
+
+.active_substances:hover.active_substances:before {
+  background: url("../img/svg/вещества_hover.svg");
+  width: 186px;
+  height: 123px;
+  top: 13px;
+}
+
+.categories_item_title {
+  color: $color-black-text;
+  text-decoration: none;
+  font-family: "Raleway", "serif" ;
+  font-size: 24px;
+  line-height :28px;
+  font-weight: bold;
+  width: 65%;
+  margin: 0;
+  padding: 0;
+}
+
+.categories_item:hover .categories_item__anime_circle-one {
+  position: absolute;
+  top: -11px;
+  left: -15px;
+  width: 114px;
+  height: 114px;
+  border-radius: 100%;
+  background-color: $color-white-opacity;
+  animation-name: animation-circle-one;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.categories_item:hover .categories_item__anime_circle-two {
+  position: absolute;
+  top: -8px;
+  left: 70px;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  background-color: $color-white-opacity;
+  animation-name: animation-circle-two;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.categories_item:hover .categories_item__anime_circle-three{
+  position: absolute;
+  bottom: -27px;
+  right: -22px;
+  width: 72px;
+  height: 72px;
+  border-radius: 100%;
+  background-color: $color-white-opacity;
+  animation-name: animation-circle-three;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.backround_img {
+  position: absolute;
+  transition: 0.5s;
+}
+
+.yellow_circle {
+  top: 0;
+  right: 0;
+}
+
+.green_leaf {
+  top: 13%;
+  left: 0;
+}
+
+.brown_leaf {
+  bottom: 15%;
+  right: 29%;
+}
+
+.decorOne {
+  top: 0;
+  right: 31%;
+}
+
+.decorTwo {
+  bottom: 0;
+  left: 0;
+}
+
+@media(min-width: 1920px) {
+  .categories_content {
+    padding: 153px 0 153px 0;
+    margin: 0 auto;
+  }
+
+  .categories_list {
+    padding: 0;
+  }
+
+  .categories_title {
+    width: 1900px;
+  }
+}
+
+@keyframes animation-circle-one {
+  0% {
+    top: -11px;
+    left: -15px;
+    width: 114px;
+    height: 114px;
+  }
+  50% {
+    top: 155px;
+    left: 173px;
+    width: 50px;
+    height: 50px;
+  }
+  100% {
+    top: 0;
+    left: 230px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@keyframes animation-circle-two {
+  0% {
+    top: -8px;
+    left: 70px;
+    width: 45px;
+    height: 45px;
+  }
+  50% {
+    top: 155px;
+    left: 30px;
+    width: 100px;
+    height: 100px;
+  }
+  100% {
+    top: 0;
+    left: 100px;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@keyframes animation-circle-three {
+  0% {
+    bottom: -27px;
+    right: -22px;
+    width: 72px;
+    height: 72px;
+  }
+  25% {
+    bottom: 50px;
+    right: 50px;
+    width: 72px;
+    height: 72px;
+  }
+  50% {
+    bottom: 0;
+    right: 200px;
+    width: 30px;
+    height: 30px;
+  }
+  75% {
+    bottom: 50px;
+    right: 350px;
+    width: 40px;
+    height: 40px;
+  }
+  100% {
+    bottom: 40px;
+    right: 160px;
+    width: 70px;
+    height: 70px;
+  }
+}
